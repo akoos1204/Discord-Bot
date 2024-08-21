@@ -45,13 +45,12 @@ if (process.env.TOPGG_TOKEN) {
     AutoPoster(process.env.TOPGG_TOKEN, manager);
 }
 console.clear();
-console.log(chalk.blue(chalk.bold(`System`)), (chalk.white(`>>`)), (chalk.green(`Starting up`)), (chalk.white(`...`)))
+console.log(chalk.cyanBright(chalk.bold(`System`)), (chalk.white(`>>`)), (chalk.green(`Starting up`)), (chalk.white(`...`)))
 console.log(`\u001b[0m`)
-console.log(chalk.red(`© CorwinDev | 2021 - ${new Date().getFullYear()}`))
-console.log(chalk.red(`All rights reserved`))
+console.log(chalk.yellow(`akos's discord bot`))
 console.log(`\u001b[0m`)
 console.log(`\u001b[0m`)
-console.log(chalk.blue(chalk.bold(`System`)), (chalk.white(`>>`)), chalk.red(`Version ${require(`${process.cwd()}/package.json`).version}`), (chalk.green(`loaded`)))
+console.log(chalk.cyanBright(chalk.bold(`System`)), (chalk.white(`>>`)), chalk.red(`Version ${require(`${process.cwd()}/package.json`).version}`), (chalk.green(`loaded`)))
 console.log(`\u001b[0m`);
 
 manager.on('shardCreate', shard => {
@@ -76,7 +75,7 @@ manager.on('shardCreate', shard => {
         embeds: [embed],
     });
 
-    console.log(chalk.blue(chalk.bold(`System`)), (chalk.white(`>>`)), (chalk.green(`Starting`)), chalk.red(`Shard #${shard.id + 1}`), (chalk.white(`...`)))
+    console.log(chalk.cyanBright(chalk.bold(`System`)), (chalk.white(`>>`)), (chalk.green(`Starting`)), chalk.red(`Shard #${shard.id + 1}`), (chalk.white(`...`)))
     console.log(`\u001b[0m`);
 
     shard.on("death", (process) => {
